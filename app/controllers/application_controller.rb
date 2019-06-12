@@ -6,9 +6,9 @@ class ApplicationController < Sinatra::Base
     set :session_secret, "secret"
   end
 
-  #get '/' do
-   # erb :index
- # end
+  get '/' do
+    erb :index
+  end
 
   post '/login' do
     @user = User.find_by(:username => params[:username])
